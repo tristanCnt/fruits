@@ -26,26 +26,24 @@ public class Panier {
 
     //groupe 2
     public ArrayList<Fruit> getFruits() {  //accesseur du premier attribut
-       return null;
+       return this.fruits;
     }
 
     public void setFruits(ArrayList<Fruit> fruits) { //modificateur du premier attribut
-
+      this.fruits = fruits ; 
     }
 
     public int getTaillePanier(){  //accesseur retournant la taille allouee pour l'attibut fruits
-        return 0;
+        return this.fruits.size() ;
     }
 
     public int getContenanceMax(){  //accesseur du second attribut
-	return 0;
+	return this.contenanceMax;
     }
 
     //groupe 3
     public Fruit getFruit(int i){  //accesseur retournant le fruit contenu dans le panier a l'emplacement n°i ou null s'il n'y a rien a cet emplacement
-      Fruit f = new Fruit();
-      f = this.fruits.get(i);
-	return f;
+	return this.fruits.get(i);
     }
 
     public void setFruit(int i, Fruit f){  //modificateur du fruit contenu dans le panier a l'emplacement n°i par f (s'il y a bien deja un fruit a cet emplacement, ne rien faire sinon)
@@ -95,6 +93,10 @@ public class Panier {
 	System.out.println("premier test Panier");
 	Panier p = new Panier(9);
 	System.out.println(p.toString());
+    Panier p = new Panier(5);
+    System.out.println("getFruits : "+ p.getFruits());
+    System.out.println("get taille panier : "+ p.getTaillePanier());
+    System.out.println("get contenace max : "+ p.getContenanceMax());
     }
 
 }
