@@ -5,7 +5,7 @@ import java.util.*;
  */
 public class Panier {
     private ArrayList<Fruit> fruits;  //attribut pour stocker les fruits
-    private int contenanceMax;        //nb maximum d'oranges que peut contenir le panier
+    private int contenanceMax;        //nb maximum de fruits que peut contenir le panier
 	
     //groupe 1
     public Panier(int contenanceMax){  //initialise un panier vide ayant une certaine contenance maximale (precisee en parametre)
@@ -63,7 +63,11 @@ public class Panier {
 
     //groupe 6
     public double getPrix(){  //calcule le prix du panier par addition des prix de tous les fruits contenus dedans
-	return 0;
+	double prix = 0;
+	for(int i = 0 ; i < this.fruits.size(); i++)
+		 prix = prix + this.fruits.get(i).getPrix();
+
+	return prix;
     }
     
     //groupe 7
@@ -79,7 +83,16 @@ public class Panier {
     
     //tests
     public static void main (String[] args){
-    	//Ecrire ici vos tests
-	System.out.println("premier test Panier");
+    	ArrayList fruits= new ArrayList();
+	Poire p1 = new Poire();
+	Orange o1 = new Orange(0.6, "Brésil");
+          fruits.add(p1);
+          fruits.add(o1);
+	Panier p = new Panier( 10);
+	System.out.println(p1.toString());
+	System.out.println(o1.toString());
+	System.out.println(p.getPrix());
     }
 }
+
+
