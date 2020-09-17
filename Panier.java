@@ -6,82 +6,108 @@ import java.util.*;
 public class Panier {
     private ArrayList<Fruit> fruits;  //attribut pour stocker les fruits
     private int contenanceMax;        //nb maximum d'oranges que peut contenir le panier
-	
+
     //groupe 1
     public Panier(int contenanceMax){  //initialise un panier vide ayant une certaine contenance maximale (precisee en parametre)
+<<<<<<< HEAD
 		
+=======
+	this.contenanceMax = contenanceMax;
+	fruits = new ArrayList<Fruit>();
+
+>>>>>>> d1f278924fd973da3fcede0a50f6a87c744b0d8d
     }
 
     @Override
     public String toString(){  //affichage de ce qui est contenu dans le panier : liste des fruits presents
-        return "";
+	String s = "";
+	for(int i=0;i<getTaillePanier();i++)
+	{
+		s+= fruits.get(i).toString() + " - ";
+	}
+        return s;
     }
-    
+
     //groupe 2
     public ArrayList<Fruit> getFruits() {  //accesseur du premier attribut
-       return null;
+       return this.fruits;
     }
 
     public void setFruits(ArrayList<Fruit> fruits) { //modificateur du premier attribut
-      
+      this.fruits = fruits ; 
     }
 
     public int getTaillePanier(){  //accesseur retournant la taille allouee pour l'attibut fruits
-        return 0;
+        return this.fruits.size() ;
     }
-    
+
     public int getContenanceMax(){  //accesseur du second attribut
-	return 0;
+	return this.contenanceMax;
     }
 
     //groupe 3
     public Fruit getFruit(int i){  //accesseur retournant le fruit contenu dans le panier a l'emplacement n°i ou null s'il n'y a rien a cet emplacement
-	return null;
+	return this.fruits.get(i);
     }
-    
-    public void setFruit(int i, Fruit f){  //modificateur du fruit contenu dans le panier a l'emplacement n°i par f (s'il y a bien deja un fruit a cet emplacement, ne rien faire sinon)
 
+    public void setFruit(int i, Fruit f){  //modificateur du fruit contenu dans le panier a l'emplacement n°i par f (s'il y a bien deja un fruit a cet emplacement, ne rien faire sinon)
+      this.fruits.set(i, f);
     }
-    
+
     public boolean estVide(){  //predicat indiquant que le panier est vide
-	return false;
+	return this.fruits.isEmpty();
     }
-    
+
     public boolean estPlein(){  //predicat indiquant que le panier est plein
-	return false;
+      boolean estPlein = false;
+      if(this.fruits.size() == this.contenanceMax)
+        estPlein = true;
+	return estPlein;
     }
 
     //groupe 4
     public void ajout(Fruit o) throws PanierPleinException{  //ajoute le fruit o a la fin du panier si celui-ci n'est pas plein
+<<<<<<< HEAD
 	if (!estPlein()){
 		fruits.add(o);
 	}
+=======
+
+>>>>>>> d1f278924fd973da3fcede0a50f6a87c744b0d8d
     }
 
     //groupe 5
     public void retrait() throws PanierVideException{ //retire le dernier fruit du panier si celui-ci n'est pas vide
-     
+
     }
 
     //groupe 6
     public double getPrix(){  //calcule le prix du panier par addition des prix de tous les fruits contenus dedans
 	return 0;
     }
-    
+
     //groupe 7
     public void boycotteOrigine(String origine){  //supprime du panier tous les fruits provenant du pays origine
-	
-    }  
-        
-    //groupe 8    
+
+    }
+
+    //groupe 8
     @Override
     public boolean equals(Object o){  ///predicat pour tester si 2 paniers sont equivalents : s'ils contiennent exactement les memes fruits
         return false;
     }
-    
+
     //tests
     public static void main (String[] args){
     	//Ecrire ici vos tests
 	System.out.println("premier test Panier");
+	Panier p = new Panier(9);
+	System.out.println(p.toString());
+    Panier p = new Panier(5);
+    System.out.println("getFruits : "+ p.getFruits());
+    System.out.println("get taille panier : "+ p.getTaillePanier());
+    System.out.println("get contenace max : "+ p.getContenanceMax());
     }
+
 }
+
