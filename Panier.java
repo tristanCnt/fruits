@@ -10,7 +10,11 @@ public class Panier {
     //groupe 1
     public Panier(int contenanceMax){  //initialise un panier vide ayant une certaine contenance maximale (precisee en parametre)
 <<<<<<< HEAD
+<<<<<<< HEAD
+		
+=======
 	
+>>>>>>> d30568f8abb7ef41904eb100e13bfa06b62a5226
 =======
 	this.contenanceMax = contenanceMax;
 	fruits = new ArrayList<Fruit>();
@@ -64,7 +68,17 @@ public class Panier {
 
     //groupe 4
     public void ajout(Fruit o) throws PanierPleinException{  //ajoute le fruit o a la fin du panier si celui-ci n'est pas plein
+<<<<<<< HEAD
+<<<<<<< HEAD
+	if (!estPlein()){
+		fruits.add(o);
+	}
+=======
+
+>>>>>>> d1f278924fd973da3fcede0a50f6a87c744b0d8d
+=======
        
+>>>>>>> d30568f8abb7ef41904eb100e13bfa06b62a5226
     }
 
     //groupe 5
