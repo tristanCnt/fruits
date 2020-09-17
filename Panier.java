@@ -88,7 +88,7 @@ public class Panier {
 	Orange o1 = new Orange(0.6, "Brésil");
           fruits.add(p1);
           fruits.add(o1);
-	Panier p = new Panier( 10);
+	Panier p = new Panier(fruits, 10);
 	System.out.println(p1.toString());
 	System.out.println(o1.toString());
 	System.out.println(p.getPrix());
