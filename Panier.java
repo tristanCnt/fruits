@@ -19,19 +19,19 @@ public class Panier {
     
     //groupe 2
     public ArrayList<Fruit> getFruits() {  //accesseur du premier attribut
-       return null;
+       return this.fruits;
     }
 
     public void setFruits(ArrayList<Fruit> fruits) { //modificateur du premier attribut
-      
+      this.fruits = fruits ; 
     }
 
     public int getTaillePanier(){  //accesseur retournant la taille allouee pour l'attibut fruits
-        return 0;
+        return this.fruits.size() ;
     }
     
     public int getContenanceMax(){  //accesseur du second attribut
-	return 0;
+	return this.contenanceMax;
     }
 
     //groupe 3
@@ -81,5 +81,9 @@ public class Panier {
     public static void main (String[] args){
     	//Ecrire ici vos tests
 	System.out.println("premier test Panier");
+    Panier p = new Panier(5);
+    System.out.println("getFruits : "+ p.getFruits());
+    System.out.println("get taille panier : "+ p.getTaillePanier());
+    System.out.println("get contenace max : "+ p.getContenanceMax());
     }
 }
