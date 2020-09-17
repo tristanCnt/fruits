@@ -9,7 +9,7 @@ public class Panier {
 	
     //groupe 1
     public Panier(int contenanceMax){  //initialise un panier vide ayant une certaine contenance maximale (precisee en parametre)
-	
+		
     }
 
     @Override
@@ -53,7 +53,9 @@ public class Panier {
 
     //groupe 4
     public void ajout(Fruit o) throws PanierPleinException{  //ajoute le fruit o a la fin du panier si celui-ci n'est pas plein
-       
+	if (!estPlein()){
+		fruits.add(o);
+	}
     }
 
     //groupe 5
