@@ -9,12 +9,18 @@ public class Panier {
 	
     //groupe 1
     public Panier(int contenanceMax){  //initialise un panier vide ayant une certaine contenance maximale (precisee en parametre)
-	
+	this.contenanceMax = contenanceMax;
+	fruits = new ArrayList<Fruit>();
     }
 
     @Override
     public String toString(){  //affichage de ce qui est contenu dans le panier : liste des fruits presents
-        return "";
+	String s = "";
+	for(int i=0;i<getTaillePanier();i++)
+	{
+		s+= fruits.get(i).toString() + " - ";
+	}
+        return s;
     }
     
     //groupe 2
@@ -81,5 +87,8 @@ public class Panier {
     public static void main (String[] args){
     	//Ecrire ici vos tests
 	System.out.println("premier test Panier");
+	Panier p = new Panier(9);
+	System.out.println(p.toString());
     }
+
 }
