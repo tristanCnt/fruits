@@ -9,12 +9,23 @@ public class Panier {
 	
     //groupe 1
     public Panier(int contenanceMax){  //initialise un panier vide ayant une certaine contenance maximale (precisee en parametre)
+<<<<<<< HEAD
 	
+=======
+	this.contenanceMax = contenanceMax;
+	fruits = new ArrayList<Fruit>();
+
+>>>>>>> d1f278924fd973da3fcede0a50f6a87c744b0d8d
     }
 
     @Override
     public String toString(){  //affichage de ce qui est contenu dans le panier : liste des fruits presents
-        return "";
+	String s = "";
+	for(int i=0;i<getTaillePanier();i++)
+	{
+		s+= fruits.get(i).toString() + " - ";
+	}
+        return s;
     }
     
     //groupe 2
@@ -83,6 +94,7 @@ public class Panier {
     
     //tests
     public static void main (String[] args){
+<<<<<<< HEAD
     	ArrayList fruits= new ArrayList();
 	Poire p1 = new Poire();
 	Orange o1 = new Orange(0.6, "Brésil");
@@ -92,7 +104,18 @@ public class Panier {
 	System.out.println(p1.toString());
 	System.out.println(o1.toString());
 	System.out.println(p.getPrix());
+=======
+    	//Ecrire ici vos tests
+	System.out.println("premier test Panier");
+	Panier p = new Panier(9);
+	System.out.println(p.toString());
+    Panier p = new Panier(5);
+    System.out.println("getFruits : "+ p.getFruits());
+    System.out.println("get taille panier : "+ p.getTaillePanier());
+    System.out.println("get contenace max : "+ p.getContenanceMax());
+>>>>>>> d1f278924fd973da3fcede0a50f6a87c744b0d8d
     }
+
 }
 
 
