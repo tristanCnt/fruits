@@ -9,7 +9,6 @@ public class Panier {
 
     //groupe 1
     public Panier(int contenanceMax){  //initialise un panier vide ayant une certaine contenance maximale (precisee en parametre)
-
     }
 
     @Override
@@ -42,15 +41,18 @@ public class Panier {
     }
 
     public void setFruit(int i, Fruit f){  //modificateur du fruit contenu dans le panier a l'emplacement n°i par f (s'il y a bien deja un fruit a cet emplacement, ne rien faire sinon)
-
+      this.fruits.set(i, f);
     }
 
     public boolean estVide(){  //predicat indiquant que le panier est vide
-	return false;
+	return this.fruits.isEmpty();
     }
 
     public boolean estPlein(){  //predicat indiquant que le panier est plein
-	return false;
+      boolean estPlein = false;
+      if(this.fruits.size() == this.contenanceMax)
+        estPlein = true;
+	return estPlein;
     }
 
     //groupe 4
@@ -85,3 +87,4 @@ public class Panier {
 	System.out.println("premier test Panier");
     }
 }
+
