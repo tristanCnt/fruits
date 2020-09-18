@@ -1,3 +1,9 @@
+package fr.ufrsciencestech.glpaniertp2;
+
+
+import fr.ufrsciencestech.glpaniertp2.Fruit;
+import fr.ufrsciencestech.glpaniertp2.Fruit;
+
 
 /**
  *

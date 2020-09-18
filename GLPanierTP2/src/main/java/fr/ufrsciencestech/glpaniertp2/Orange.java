@@ -1,3 +1,5 @@
+package fr.ufrsciencestech.glpaniertp2;
+
 /**
  *
  * @author roudet

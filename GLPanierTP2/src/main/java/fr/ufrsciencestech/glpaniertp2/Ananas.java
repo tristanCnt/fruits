@@ -1,3 +1,5 @@
+package fr.ufrsciencestech.glpaniertp2;
+
 public class Ananas {
     private double prix;
     private String origine;
