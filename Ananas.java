@@ -2,13 +2,13 @@ public class Ananas {
     private double prix;
     private String origine;
 	
-    public Orange() 
+    public Ananas()   //modifie par C. Roudet
     {
         this.prix = 2;  //prix en euros
         this.origine="Bresil";
     }
     
-    public Orange(double prix, String origine) 
+    public Ananas(double prix, String origine)  //modifie par C. Roudet
     {
 	if(prix < 0)
 	    this.prix = -prix;  //une solution possible pour interdire les prix negatifs
@@ -45,7 +45,7 @@ public class Ananas {
     @Override
     public boolean equals(Object o){  //predicat pour tester si 2 oranges sont equivalentes
         if(o != null && getClass() == o.getClass()){
-            Orange or = (Orange) o;
+            Ananas or = (Ananas) o;                                  //modifie par C. Roudet
             return (prix == or.prix && origine.equals(or.origine));
         }
         return false;

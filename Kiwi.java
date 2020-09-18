@@ -2,17 +2,17 @@
  *
  * @author roudet
  */
-public class Kiwi {
+public class Kiwi {              //modifie par C. Roudet
     private double prix;
     private String origine;
 	
-    public Orange() 
+    public Kiwi()   //modifie par C. Roudet
     {
         this.prix = 0.5;  //prix en euros
         this.origine="Espagne";
     }
     
-    public Orange(double prix, String origine) 
+    public Kiwi(double prix, String origine)  //modifie par C. Roudet
     {
 	if(prix < 0)
 	    this.prix = -prix;  //une solution possible pour interdire les prix negatifs
@@ -20,7 +20,7 @@ public class Kiwi {
 	    this.prix = prix;
 
 	if(origine.equals(""))
-            this.origine = "Espagne";  //Espagne par défaut
+            this.origine ="Espagne";  //Espagne par defaut
 	else
             this.origine = origine;   
     }
@@ -49,7 +49,7 @@ public class Kiwi {
     @Override
     public boolean equals(Object o){  //predicat pour tester si 2 oranges sont equivalentes
         if(o != null && getClass() == o.getClass()){
-            Orange or = (Orange) o;
+            Kiwi or = (Kiwi) o;                                        //modifie par C. Roudet
             return (prix == or.prix && origine.equals(or.origine));
         }
         return false;

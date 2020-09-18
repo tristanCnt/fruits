@@ -93,11 +93,6 @@ public class Panier {
 			}
 		}
     }
-
-    //groupe 8
-
-	
-    }  
         
     //groupe 8    
     @Override
@@ -106,7 +101,7 @@ public class Panier {
     }
     
     //tests
-    public static void main (String[] args){
+    public static void main (String[] args){  //modifie par C. Roudet
 	//Ecrire ici vos tests
 	Poire p1 = new Poire();
 	Orange o1 = new Orange(0.6, "Brésil");
