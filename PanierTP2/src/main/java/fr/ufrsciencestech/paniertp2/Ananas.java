@@ -1,20 +1,16 @@
-package fr.ufrsciencestech.glpaniertp2;
+package fr.ufrsciencestech.paniertp2;
 
-/**
- *
- * @author roudet
- */
-public class Orange {
+public class Ananas {
     private double prix;
     private String origine;
 	
-    public Orange() 
+    public Ananas()   //modifie par C. Roudet
     {
-        this.prix = 0.5;  //prix en euros
-        this.origine="Espagne";
+        this.prix = 2;  //prix en euros
+        this.origine="Bresil";
     }
     
-    public Orange(double prix, String origine) 
+    public Ananas(double prix, String origine)  //modifie par C. Roudet
     {
 	if(prix < 0)
 	    this.prix = -prix;  //une solution possible pour interdire les prix negatifs
@@ -22,7 +18,7 @@ public class Orange {
 	    this.prix = prix;
 
 	if(origine.equals(""))
-            this.origine = "Espagne";  //Espagne par défaut
+            this.origine = "Bresil";  //Espagne par défaut
 	else
             this.origine = origine;   
     }
@@ -45,13 +41,13 @@ public class Orange {
 
     @Override
     public String toString(){
-        return "Orange de " + origine + " a " + prix + " euros";
+        return "Ananas de " + origine + " a " + prix + " euros";
     }
 
     @Override
     public boolean equals(Object o){  //predicat pour tester si 2 oranges sont equivalentes
         if(o != null && getClass() == o.getClass()){
-            Orange or = (Orange) o;
+            Ananas or = (Ananas) o;                                  //modifie par C. Roudet
             return (prix == or.prix && origine.equals(or.origine));
         }
         return false;
@@ -64,6 +60,15 @@ public class Orange {
 
     public static void main (String[] args){
         //Ecrire ici vos tests
-	System.out.println("premier test Orange");
+	System.out.println("premier test Ananas");
+	Orange o = new Orange();
+	System.out.println(o.getPrix());
+	o.setPrix(-2.0);
+	System.out.println(o.getPrix());
+	Orange o2 = new Orange(-3.0, "RDC");
+	
+	System.out.println(o2.getPrix());
+	
    }
 }
+

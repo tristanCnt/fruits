@@ -1,25 +1,20 @@
-package fr.ufrsciencestech.glpaniertp2;
-
-
-import fr.ufrsciencestech.glpaniertp2.Fruit;
-import fr.ufrsciencestech.glpaniertp2.Fruit;
-
+package fr.ufrsciencestech.paniertp2;
 
 /**
  *
  * @author roudet
  */
-public class Poire implements Fruit {
+public class Kiwi {              //modifie par C. Roudet
     private double prix;
     private String origine;
 	
-    public Poire() 
+    public Kiwi()   //modifie par C. Roudet
     {
         this.prix = 0.5;  //prix en euros
         this.origine="Espagne";
     }
     
-    public Poire(double prix, String origine) 
+    public Kiwi(double prix, String origine)  //modifie par C. Roudet
     {
 	if(prix < 0)
 	    this.prix = -prix;  //une solution possible pour interdire les prix negatifs
@@ -27,7 +22,7 @@ public class Poire implements Fruit {
 	    this.prix = prix;
 
 	if(origine.equals(""))
-            this.origine = "Espagne";  //Espagne par défaut
+            this.origine ="Espagne";  //Espagne par defaut
 	else
             this.origine = origine;   
     }
@@ -50,25 +45,25 @@ public class Poire implements Fruit {
 
     @Override
     public String toString(){
-        return "Poire de " + origine + " a " + prix + " euros";
+        return "Kiwi de " + origine + " a " + prix + " euros";
     }
 
     @Override
-    public boolean equals(Object o){  //predicat pour tester si 2 poires sont equivalentes
+    public boolean equals(Object o){  //predicat pour tester si 2 oranges sont equivalentes
         if(o != null && getClass() == o.getClass()){
-            Poire or = (Poire) o;
+            Kiwi or = (Kiwi) o;                                        //modifie par C. Roudet
             return (prix == or.prix && origine.equals(or.origine));
         }
         return false;
     }
 
-    public boolean isSeedless() {  //predicat indiquant qu'une poire a des pepins
+    public boolean isSeedless() {  //predicat indiquant qu'une orange a des pepins
         return false;
     }
 
 
     public static void main (String[] args){
-      Poire p=new Poire(0.5,"Portugal");
-	System.out.println(p.toString());
+        //Ecrire ici vos tests
+	System.out.println("premier test Kiwi");
    }
 }

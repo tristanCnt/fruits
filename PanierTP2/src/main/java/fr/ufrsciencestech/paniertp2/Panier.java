@@ -1,9 +1,9 @@
-package fr.ufrsciencestech.glpaniertp2;
+package fr.ufrsciencestech.paniertp2;
 
-import fr.ufrsciencestech.glpaniertp2.Orange;
-import fr.ufrsciencestech.glpaniertp2.Fruit;
-import fr.ufrsciencestech.glpaniertp2.Fruit;
-import fr.ufrsciencestech.glpaniertp2.Orange;
+import fr.ufrsciencestech.paniertp2.Orange;
+import fr.ufrsciencestech.paniertp2.Fruit;
+import fr.ufrsciencestech.paniertp2.Fruit;
+import fr.ufrsciencestech.paniertp2.Orange;
 import java.util.*;
 /**
  *

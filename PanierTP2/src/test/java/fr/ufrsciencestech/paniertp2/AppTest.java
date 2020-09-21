@@ -1,4 +1,4 @@
-package fr.ufrsciencestech.glpaniertp2;
+package fr.ufrsciencestech.paniertp2;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

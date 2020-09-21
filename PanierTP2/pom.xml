@@ -18,17 +18,17 @@
 
   <dependencies>
     <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>3.8.1</version>
-        <scope>test</scope>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
-        <groupId>org.mockito</groupId>
-        <artifactId>mockito-all</artifactId>
-        <version>1.9.5</version>
-        <scope>test</scope>
-        <type>jar</type>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>1.9.5</version>
+            <scope>test</scope>
+            <type>jar</type>
     </dependency>
   </dependencies>
   
@@ -42,7 +42,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>fr.ufrsciencestech.glpaniertp2.Panier</mainClass>
+                            <mainClass>fr.ufrsciencestech.paniertp2.Panier</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -66,7 +66,7 @@
                     </execution>
                 </executions>
             </plugin>
-            
+       
         </plugins>
     </build>
 </project>
