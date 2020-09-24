@@ -1,10 +1,5 @@
 package fr.ufrsciencestech.paniertp2;
 
-
-import fr.ufrsciencestech.paniertp2.Fruit;
-import fr.ufrsciencestech.paniertp2.Fruit;
-
-
 /**
  *
  * @author roudet

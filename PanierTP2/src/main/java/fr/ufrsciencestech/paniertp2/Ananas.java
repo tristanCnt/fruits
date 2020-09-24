@@ -1,6 +1,6 @@
 package fr.ufrsciencestech.paniertp2;
 
-public class Ananas {
+public class Ananas implements Fruit{
     private double prix;
     private String origine;
 	
@@ -53,8 +53,8 @@ public class Ananas {
         return false;
     }
 
-    public boolean isSeedless() {  //predicat indiquant qu'une orange a des pepins
-        return false;
+    public boolean isSeedless() {  //predicat indiquant qu'un ananas n'a pas de pepins
+        return true;
     }
 
 

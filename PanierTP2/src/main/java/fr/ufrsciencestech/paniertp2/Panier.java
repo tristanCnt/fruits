@@ -1,9 +1,5 @@
 package fr.ufrsciencestech.paniertp2;
 
-import fr.ufrsciencestech.paniertp2.Orange;
-import fr.ufrsciencestech.paniertp2.Fruit;
-import fr.ufrsciencestech.paniertp2.Fruit;
-import fr.ufrsciencestech.paniertp2.Orange;
 import java.util.*;
 /**
  *
@@ -35,7 +31,7 @@ public class Panier {
     }
 
     public void setFruits(ArrayList<Fruit> fruits) { //modificateur du premier attribut
-      
+        this.fruits = fruits;
     }
 
     public int getTaillePanier(){  //accesseur retournant la taille allouee pour l'attibut fruits
@@ -93,11 +89,11 @@ public class Panier {
     
     //groupe 7
     public void boycotteOrigine(String origine){  //supprime du panier tous les fruits provenant du pays origine
-		for (int i = 0 ;i<fruits.size();i++){
-			if (fruits.get(i).getOrigine().equals(origine) ){
-				fruits.remove(fruits.get(i));
-			}
-		}
+	for (int i = 0 ;i<fruits.size();i++){
+            if (fruits.get(i).getOrigine().equals(origine) ){
+                fruits.remove(fruits.get(i));
+            }
+	}
     }
         
     //groupe 8    

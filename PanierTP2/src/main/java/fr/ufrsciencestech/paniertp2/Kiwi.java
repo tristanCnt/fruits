@@ -4,7 +4,7 @@ package fr.ufrsciencestech.paniertp2;
  *
  * @author roudet
  */
-public class Kiwi {              //modifie par C. Roudet
+public class Kiwi implements Fruit{              //modifie par C. Roudet
     private double prix;
     private String origine;
 	
@@ -57,8 +57,8 @@ public class Kiwi {              //modifie par C. Roudet
         return false;
     }
 
-    public boolean isSeedless() {  //predicat indiquant qu'une orange a des pepins
-        return false;
+    public boolean isSeedless() {  //predicat indiquant qu'un kiwi n'a pas de pepins
+        return true;
     }
 
 

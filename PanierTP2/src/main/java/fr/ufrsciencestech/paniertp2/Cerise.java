@@ -1,7 +1,7 @@
 package fr.ufrsciencestech.paniertp2;
 
 
-public class Cerise {
+public class Cerise implements Fruit{
     private double prix;
     private String origine;
 	
