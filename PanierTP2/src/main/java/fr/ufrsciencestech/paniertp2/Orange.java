@@ -42,6 +42,11 @@ public class Orange implements Fruit{
     public void setOrigine(String origine){
 	this.origine=origine;
     }
+    
+    public String getType()
+    {
+        return "orange";
+    }
 
     @Override
     public String toString(){

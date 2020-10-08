@@ -25,7 +25,12 @@ public class Banane implements Fruit
     {
 	this.prix=prix;
     }
-		
+    
+	 public String getType()
+    {
+        return "banane";
+    }
+	
     public String getOrigine()
     {
 	return this.origine;

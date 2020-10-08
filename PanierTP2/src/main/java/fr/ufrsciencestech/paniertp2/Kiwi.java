@@ -35,6 +35,11 @@ public class Kiwi implements Fruit{              //modifie par C. Roudet
 	this.prix=prix;
     }
 
+     public String getType()
+    {
+        return "kiwi";
+    }
+
     public String getOrigine(){
 	return origine;
     }

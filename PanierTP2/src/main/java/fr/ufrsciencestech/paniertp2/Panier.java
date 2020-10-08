@@ -1,5 +1,13 @@
 package fr.ufrsciencestech.paniertp2;
 
+
+import MVC.*;
+
+//utilise pour springIoC :
+import javax.swing.*;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import java.util.*;
 /**
  *
@@ -8,11 +16,14 @@ import java.util.*;
 public class Panier {
     private ArrayList<Fruit> fruits;  //attribut pour stocker les fruits
     private int contenanceMax;        //nb maximum de fruits que peut contenir le panier
+    private VueG vueg;      //pour pouvoir changer de vue si on le souhaite
+    private Controleur controleur;  //pour pouvoir changer de controleur si on le souhaite
 	
+    
     //groupe 1
     public Panier(int contenanceMax){  //initialise un panier vide ayant une certaine contenance maximale (precisee en parametre)
 	this.contenanceMax = contenanceMax;
-	fruits = new ArrayList<Fruit>();
+	fruits = new ArrayList<Fruit>();        
     }
 
     @Override
@@ -48,6 +59,8 @@ public class Panier {
 	return f;
     }
     
+
+    
     public void setFruit(int i, Fruit f){  //modificateur du fruit contenu dans le panier a l'emplacement n°i par f (s'il y a bien deja un fruit a cet emplacement, ne rien faire sinon)
 	this.fruits.set(i, f);
     }
@@ -67,6 +80,8 @@ public class Panier {
     public void ajout(Fruit o) throws PanierPleinException{  //ajoute le fruit o a la fin du panier si celui-ci n'est pas plein
 	if (!estPlein()){
 		fruits.add(o);
+             //A FAIRE   setChanged();
+             //   notifyObservers();
 	}
     }
 
@@ -109,21 +124,66 @@ public class Panier {
         return false;
     }
     
+     public VueG getVueg() {
+        return vueg;
+    }
+
+    /**
+     * @param vueg the vueg to set
+     */
+    public void setVueg(VueG vueg) {
+        this.vueg = vueg;
+    }
+
+    /**
+     * @return the controleur
+     */
+    public Controleur getControleur() {
+        return controleur;
+    }
+
+    /**
+     * @param controleur the controleur to set
+     */
+    public void setControleur(Controleur controleur) {
+        this.controleur = controleur;
+    }
+
+    
     //tests
-    public static void main (String[] args){  //modifie par C. Roudet
+    public static void main (String[] args) throws PanierPleinException{  //modifie par C. Roudet
 	//Ecrire ici vos tests
-	Poire p1 = new Poire();
-	Orange o1 = new Orange(0.6, "Brésil");
+
+	Fruit p1 = new Poire();
+	Fruit o1 = new Orange(0.6, "Brésil");
+        System.out.println(o1.getType());
 	System.out.println(p1.toString());
 	System.out.println(o1.toString());
 
 	System.out.println("premier test Panier");
     	Panier p = new Panier(5);
-	System.out.println(p.toString());
-    	System.out.println("getFruits : "+ p.getFruits());
+	
+
+        
+       // System.out.println(o1.getClass().getSimpleName());
+       // System.out.println(p1.getClass().getSimpleName());
+ 
+        
+        p.ajout(o1);
+        // System.out.println(p.getFruit(0).getClass().getSimpleName());
+        p.ajout(o1);
+        p.ajout(o1);         
+        p.ajout(o1);
+        
+        MVC test = new MVC(p);    //sans utiliser SpringIoC
+        
+
+    	System.out.println(p.toString());
+        System.out.println("getFruits : "+ p.getFruits());
     	System.out.println("get taille panier : "+ p.getTaillePanier());
     	System.out.println("get contenace max : "+ p.getContenanceMax());
 	System.out.println(p.getPrix());
+        
     }
 
 }

@@ -27,6 +27,12 @@ public class Ananas implements Fruit{
 	return prix;
     }
 
+     public String getType()
+    {
+        return "ananas";
+    }
+
+     
     public void setPrix(double prix){
 	this.prix=prix;
     }

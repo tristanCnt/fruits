@@ -35,6 +35,12 @@ public class Poire implements Fruit {
 	this.prix=prix;
     }
 
+     public String getType()
+    {
+        return "poire";
+    }
+
+     
     public String getOrigine(){
 	return origine;
     }
