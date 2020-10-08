@@ -10,6 +10,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
 
 /**
  *
@@ -160,11 +161,13 @@ public class PanierTest {
     @Test
     public void testAjout() throws Exception {
         System.out.println("ajout");
-        Fruit o = null;
-        Panier instance = null;
-        instance.ajout(o);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Panier p = new Panier(3);
+        Orange mockor = mock(Orange.class);
+        when(mockor.getPrix()).thenReturn(0.5);
+        when(mockor.getOrigine()).thenReturn("Espagne");
+        p.ajout(mockor);
+        assertFalse(p.estVide());
+        assertTrue(p.getFruits().size()==1);
     }
 
     /**
